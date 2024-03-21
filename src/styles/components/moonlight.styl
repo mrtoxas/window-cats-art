@@ -1,0 +1,29 @@
+.moonlight
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index -1
+  transform-style preserve-3d
+  perspective 26rem
+  &:before
+  &:after
+    content ''
+    position absolute
+    transform-origin top
+    background get-color(halo-small)
+  &:before
+    top 3.9rem
+    left -0.7rem
+    right -0.7rem
+    bottom 3.9rem
+    transform rotateX(23deg)
+    opacity 0.1
+  &:after
+    top 10.4rem
+    left 0
+    right 0
+    height 100vh
+    transform rotateX(55deg)
+    opacity 0.06

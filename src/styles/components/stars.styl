@@ -1,0 +1,68 @@
+.stars
+  &:after
+    content ''
+    position absolute
+    border-radius 50%
+    width 0.56rem
+    height 0.56rem
+    top 7rem
+    left 13rem
+    background-color var(--color-star)
+
+.stars-small
+  position absolute
+  width 0.35rem
+  height 0.35rem
+  background-color var(--color-star)
+  border-radius 50%
+  top 5.7rem
+  left 1.87rem
+  &:before
+  &:after
+    content ''
+    position absolute
+    background-color inherit
+    border-radius inherit
+    width inherit
+    height inherit
+  &:before
+    top -0.8rem
+    left 13.7rem
+  &:after
+    top 10.8rem
+    left 7.3rem
+
+.polar-star
+  position absolute
+  overflow hidden
+  width 0.8rem
+  height 0.8rem
+  top 11.4rem
+  left 1.6rem
+  background-color var(--color-star-polar)
+  transform rotate(45deg) translateZ(0.001px)
+  transform-origin center
+  div:after
+  div:before
+    content ''
+    position absolute
+    border-radius 50%
+    background-color #0e5e95
+    width 2rem
+    height 2rem
+  div:first-child:after
+    right calc(100% - 0.15rem)
+    top 50%
+    transform translateY(-50%)
+  div:first-child:before
+    left calc(100% - 0.15rem)
+    top 50%
+    transform translateY(-50%)
+  div:last-child:after
+    bottom calc(100% - 0.15rem)
+    left 50%
+    transform translateX(-50%)
+  div:last-child:before
+    top calc(100% - 0.15rem)
+    left 50%
+    transform translateX(-50%)

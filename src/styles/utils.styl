@@ -1,0 +1,6 @@
+frame-percent(frame)
+  {(frame / $animation-length * 100) + '%'}
+    {block}
+
+get-color(value)
+  unquote('var(--color-' + value + ')')

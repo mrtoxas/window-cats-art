@@ -1,10 +1,12 @@
 {
-  "plugins": ["stylelint-scss", "stylelint-order"],
+  "plugins": ["stylelint-stylus"],
+  "extends": ["stylelint-stylus/standard"],
   "rules": {
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true,
-    "scss/at-if-no-null": null,
-    "no-descending-specificity": null
-  },
-  "extends": ["stylelint-scss", "stylelint-config-standard-scss", "stylelint-config-recess-order"]
+    "stylus/declaration-colon": "never",
+    "stylus/pythonic": "always",
+    "stylus/selector-list-comma": "never",
+    "stylus/semicolon": "never",
+    "stylus/single-line-comment": "always",
+    "stylus/at-extend-style": ["@extend", "@extends"]
+  }
 }
