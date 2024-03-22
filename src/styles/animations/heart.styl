@@ -1,4 +1,24 @@
+// animated heart-splash mixin
+heart-splash(name, start)
+  @keyframes {name + '-splash'}
+    0%
+      background transparent
+    +frame-percent(start - 0.01)
+      background transparent
+    +frame-percent(start)
+      background linear-gradient(to top, transparent 20%, white 20%, white 100%, transparent 100%)
+    +frame-percent(start + 0.08)
+      background linear-gradient(to top, transparent 50%, white 50%, white 100%, transparent 100%)
+    +frame-percent(start + 0.08 + 0.08)
+      background linear-gradient(to top, transparent 75%, white 75%, white 100%, transparent 100%)
+    +frame-percent(start + 0.08 + 0.08 + 0.1)
+      background transparent
+    100%
+      background transparent
+
 // ** Heart1
+
+heart-splash(heart-1, 2.87)
 
 @keyframes heart-1-move
   0%
@@ -47,23 +67,9 @@
   100%
     transform scale(0)
 
-@keyframes heart-1-splash
-  0%
-    background transparent
-  +frame-percent(2.86)
-    background transparent
-  +frame-percent(2.87)
-    background linear-gradient(to top, transparent 20%, white 20%, white 100%, transparent 100%)
-  +frame-percent(2.95)
-    background linear-gradient(to top, transparent 50%, white 50%, white 100%, transparent 100%)
-  +frame-percent(3.02)
-    background linear-gradient(to top, transparent 75%, white 75%, white 100%, transparent 100%)
-  +frame-percent(3.12)
-    background transparent
-  100%
-    background transparent
-
 // ** Heart2
+
+heart-splash(heart-2, 4.08)
 
 @keyframes heart-2-move
   0%
@@ -112,24 +118,9 @@
   100%
     transform scale(0)
 
-@keyframes heart-2-splash
-  0%
-    background transparent
-  +frame-percent(4.07)
-    background transparent
-  +frame-percent(4.08)
-    background linear-gradient(to top, transparent 20%, white 20%, white 100%, transparent 100%)
-  +frame-percent(4.1)
-    background linear-gradient(to top, transparent 50%, white 50%, white 100%, transparent 100%)
-  +frame-percent(4.13)
-    background linear-gradient(to top, transparent 75%, white 75%, white 100%, transparent 100%)
-  +frame-percent(4.21)
-    background transparent
-  100%
-    background transparent
-
-
 // ** Heart3
+
+heart-splash(heart-3, 1.63)
 
 @keyframes heart-3-move
   0%
@@ -142,13 +133,13 @@
     transform rotate(-30deg) translateX(0) translateY(-130px)
 
   +frame-percent(3.08)
-    transform rotate(0) translateX(0) translateY(75px)
+    transform rotate(0) translateX(0) translateY(70px)
 
   +frame-percent(3.289)
-    transform rotate(0) translateX(0) translateY(75px)
+    transform rotate(0) translateX(0) translateY(70px)
 
   +frame-percent(3.29)
-    transform rotate(0) translateX(0) translateY(75px)
+    transform rotate(0) translateX(0) translateY(70px)
 
   100%
     rotate(0deg) translateX(0)
@@ -184,19 +175,3 @@
 
   100%
     transform rotate(47deg) scale(0.5)
-
-@keyframes heart-3-splash
-  0%
-    background transparent
-  +frame-percent(1.62)
-    background transparent
-  +frame-percent(1.63)
-    background linear-gradient(to top, transparent 20%, white 20%, white 100%, transparent 100%)
-  +frame-percent(1.7)
-    background linear-gradient(to top, transparent 50%, white 50%, white 100%, transparent 100%)
-  +frame-percent(1.77)
-    background linear-gradient(to top, transparent 75%, white 75%, white 100%, transparent 100%)
-  +frame-percent(1.82)
-    background transparent
-  100%
-    background transparent
